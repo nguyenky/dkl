@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/trunk/src/Core/Framework/App/Manifest/Schema/manifest-2.0.xsd">
+    <meta>
+        <name>DKL</name>
+        <label>Duy Ky Le</label>
+        <label lang="de-DE">Duy Ky Le</label>
+        <description></description>
+        <description lang="de-DE"></description>
+        <author>Shopware</author>
+        <copyright>(c) by Shopware</copyright>
+        <version>1.0.0</version>
+        <icon>Resources/config/plugin.png</icon>
+        <license>MIT</license>
+    </meta>
+
+    <webhooks>
+        <webhook name="place" url="https://dkl.dinhvanduy7895.workers.dev/app/order-placed" event="checkout.order.placed"/>
+    </webhooks>
+
+    <setup>
+        <registrationUrl>https://dkl.dinhvanduy7895.workers.dev/app/register</registrationUrl>
+        <secret>dkl</secret>
+    </setup>
+
+    <admin>
+        <base-app-url>http://localhost:5173</base-app-url>
+    </admin>
+
+    <permissions>
+        <read>order</read>
+    </permissions>
+</manifest>
